@@ -1,0 +1,19 @@
+patentes = []
+choferes = []
+cargas = []
+horas = []
+
+contador_te = 0
+
+for i in range(30):
+    patentes.append(input(f"Ingrese patente del camión {i+1}: "))
+    choferes.append(input(f"Ingrese nombre y apellido del chofer {i+1}: "))
+    carga = input(f"Ingrese tipo de carga (madera, yerba, té) del camión {i+1}: ").lower()
+    cargas.append(carga)
+    horas.append(input(f"Ingrese hora de egreso del camión {i+1}: "))
+    if carga == "té":
+        contador_te += 1
+
+print(f"Cantidad de camiones con carga de té: {contador_te}")
+for i in range(30):
+    print(f"Camión {i+1}: Patente: {patentes[i]}, Chofer: {choferes[i]}, Carga: {cargas[i]}, Hora: {horas[i]}")
